@@ -4,7 +4,7 @@ An on-premises SharePoint Framework (SPFx) Hero/Banner web part that reads its s
 
 ## Web Part Demo
 
-![Bootstrap Slider Web Part Demo](./src/webparts/assets/webpart-demo.gif)
+![Bootstrap Slider Web Part Demo](assets/webpart-demo.gif)
 
 ## Features
 
