@@ -1,0 +1,289 @@
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+
+.heroWrapper {
+  width: 100%;
+}
+
+.configurationPanel {
+  border: 1px solid $ms-color-neutralLight;
+  border-radius: 8px;
+  background: $ms-color-white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+}
+
+.configHeader h3 {
+  margin: 0;
+  font-size: $ms-font-size-xxl;
+  font-weight: $ms-font-weight-semibold;
+}
+
+.configHeader p {
+  margin: 12px 0 20px;
+  line-height: 1.5;
+  color: $ms-color-neutralSecondary;
+}
+
+.configContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.label {
+  font-weight: $ms-font-weight-semibold;
+}
+
+.listSelect {
+  width: 100%;
+  min-height: 36px;
+  border: 1px solid $ms-color-neutralLight;
+  border-radius: 4px;
+  padding: 8px 12px;
+  font-size: $ms-font-size-m;
+  background-color: $ms-color-white;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.primaryButton,
+.secondaryButton,
+.navButton,
+.paginationDot,
+.paginationDotActive {
+  border: none;
+  cursor: pointer;
+}
+
+.primaryButton,
+.secondaryButton {
+  min-height: 36px;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: $ms-font-size-m;
+  font-weight: $ms-font-weight-semibold;
+}
+
+.primaryButton {
+  background-color: $ms-color-themePrimary;
+  color: $ms-color-white;
+}
+
+.secondaryButton {
+  background-color: $ms-color-neutralLighter;
+  color: $ms-color-neutralPrimary;
+}
+
+.primaryButton:disabled,
+.secondaryButton:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.errorMessage,
+.successMessage {
+  border-radius: 4px;
+  padding: 10px 12px;
+  font-size: $ms-font-size-s;
+}
+
+.errorMessage {
+  border: 1px solid $ms-color-redDark;
+  background-color: #fde7e9;
+  color: $ms-color-redDark;
+}
+
+.successMessage {
+  border: 1px solid $ms-color-green;
+  background-color: #eaf7ed;
+  color: $ms-color-greenDark;
+}
+
+.heroShell {
+  position: relative;
+  width: 100%;
+  background-color: $ms-color-neutralLighter;
+  border-radius: 0;
+  overflow: hidden;
+}
+
+.heroViewport {
+  position: relative;
+  width: 100%;
+}
+
+.slideInner {
+  position: relative;
+  width: 100%;
+  min-height: 65vh;
+  overflow: hidden;
+}
+
+.imageLayer {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center center;
+  transform: scale(1.05);
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.25));
+}
+
+.contentLayer {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 32px;
+  z-index: 1;
+  color: $ms-color-white;
+  max-width: 60%;
+}
+
+.contentLayer h2 {
+  margin: 0;
+  font-size: clamp(28px, 4vw, 54px);
+  line-height: 1.1;
+  font-weight: $ms-font-weight-semibold;
+}
+
+.contentLayer p {
+  margin: 16px 0 0;
+  font-size: $ms-font-size-l;
+  line-height: 1.5;
+  max-width: 640px;
+}
+
+.ctaButton {
+  margin-top: 20px;
+  display: inline-block;
+  text-decoration: none;
+  background-color: $ms-color-themePrimary;
+  color: $ms-color-white;
+  border-radius: 4px;
+  padding: 12px 20px;
+  font-weight: $ms-font-weight-semibold;
+}
+
+.ctaButton:hover,
+.ctaButton:focus {
+  background-color: $ms-color-themeDark;
+}
+
+.navButtons {
+  position: absolute;
+  inset: 50% 12px auto 12px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 2;
+}
+
+.navButton {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.82);
+  color: $ms-color-neutralPrimary;
+  font-size: 28px;
+  line-height: 1;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+.pagination {
+  position: absolute;
+  right: 24px;
+  bottom: 20px;
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.paginationDot,
+.paginationDotActive {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.paginationDotActive {
+  background-color: $ms-color-themePrimary;
+}
+
+.loadingState,
+.emptyState,
+.errorState {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 24px;
+  text-align: center;
+  font-size: $ms-font-size-l;
+  color: $ms-color-neutralSecondary;
+}
+
+@media (max-width: 768px) {
+  .contentLayer {
+    max-width: 85%;
+    padding: 20px;
+  }
+
+  .contentLayer p {
+    font-size: $ms-font-size-m;
+  }
+}
+
+@media (max-width: 480px) {
+  .configurationPanel {
+    padding: 16px;
+  }
+
+  .contentLayer {
+    max-width: 100%;
+    padding: 18px;
+  }
+
+  .contentLayer h2 {
+    font-size: 28px;
+  }
+}
+.textLeft {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.textCenter {
+  align-items: center;
+  text-align: center;
+}
+
+.textRight {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.fullWidthLayout {
+  border-radius: 0;
+}
+
+.featureLayout {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.carouselLayout {
+  width: 100%;
+}
