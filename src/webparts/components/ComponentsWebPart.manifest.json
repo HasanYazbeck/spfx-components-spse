@@ -20,7 +20,7 @@
     "description": { "default": "components description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "components"
+      "description": "Hero Component"
     }
   }]
 }

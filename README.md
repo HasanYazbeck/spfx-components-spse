@@ -2,6 +2,10 @@
 
 An on-premises SharePoint Framework (SPFx) Hero/Banner web part that reads its slides from a SharePoint list. It is built with the legacy Gulp-based SPFx toolchain and is intended for SharePoint Server Subscription Edition or a compatible on-premises farm.
 
+## Web Part Demo
+
+![Bootstrap Slider Web Part Demo](./src/webparts/assets/webpart-demo.gif)
+
 ## Features
 
 - Creates a responsive Hero banner with a background image, overlay, heading, description, and call-to-action link.
@@ -17,31 +21,31 @@ An on-premises SharePoint Framework (SPFx) Hero/Banner web part that reads its s
 
 Use **Create Hero List Automatically** on first setup, or create/select a list with these internal field names:
 
-| Field | Type | Purpose |
-| --- | --- | --- |
-| `Title` | Single line of text | English title (the standard SharePoint Title field) |
-| `TitleAR` | Single line of text | Arabic title |
-| `DescriptionEN`, `DescriptionAR` | Multiple lines of text | English and Arabic descriptions |
-| `ImageUrl`, `ImageUrlAR` | Hyperlink or Picture | English/default and Arabic image URLs |
-| `LinkUrl` | Hyperlink or Picture | CTA destination |
-| `LinkTextEN`, `LinkTextAR` | Single line of text | CTA labels |
-| `DisplayOrder` | Number | Ascending slide order |
-| `IsActive` | Yes/No | Only active items are displayed |
-| `OpenInNewTab` | Yes/No | Reserved per-item link preference |
+| Field                            | Type                   | Purpose                                             |
+| -------------------------------- | ---------------------- | --------------------------------------------------- |
+| `Title`                          | Single line of text    | English title (the standard SharePoint Title field) |
+| `TitleAR`                        | Single line of text    | Arabic title                                        |
+| `DescriptionEN`, `DescriptionAR` | Multiple lines of text | English and Arabic descriptions                     |
+| `ImageUrl`, `ImageUrlAR`         | Hyperlink or Picture   | English/default and Arabic image URLs               |
+| `LinkUrl`                        | Hyperlink or Picture   | CTA destination                                     |
+| `LinkTextEN`, `LinkTextAR`       | Single line of text    | CTA labels                                          |
+| `DisplayOrder`                   | Number                 | Ascending slide order                               |
+| `IsActive`                       | Yes/No                 | Only active items are displayed                     |
+| `OpenInNewTab`                   | Yes/No                 | Reserved per-item link preference                   |
 
 ## Prerequisites and version compatibility
 
 This is a **legacy SPFx 1.4.1** project. Use the versions below for dependable builds; modern Node.js releases are not supported by this toolchain.
 
-| Tool | Version | Notes |
-| --- | --- | --- |
-| Node.js | **8.17.0** | Pinned in `package.json` |
-| npm | **6.x** | Recommended for the lockfile v1 committed here |
-| SPFx runtime/build packages | **1.4.1** | `@microsoft/sp-*` dependencies are resolved to 1.4.1 |
-| React / React DOM | **15.6.2** | Required by SPFx 1.4.x |
-| Gulp | **3.9.1** | Project dependency; invoke it through `gulp-cli` |
-| Yeoman (`yo`) | **3.1.1** | Needed only to scaffold/recreate a project |
-| SharePoint generator | **1.10.0** | Recorded in `.yo-rc.json`; do not run it over this existing project |
+| Tool                        | Version    | Notes                                                               |
+| --------------------------- | ---------- | ------------------------------------------------------------------- |
+| Node.js                     | **8.17.0** | Pinned in `package.json`                                            |
+| npm                         | **6.x**    | Recommended for the lockfile v1 committed here                      |
+| SPFx runtime/build packages | **1.4.1**  | `@microsoft/sp-*` dependencies are resolved to 1.4.1                |
+| React / React DOM           | **15.6.2** | Required by SPFx 1.4.x                                              |
+| Gulp                        | **3.9.1**  | Project dependency; invoke it through `gulp-cli`                    |
+| Yeoman (`yo`)               | **3.1.1**  | Needed only to scaffold/recreate a project                          |
+| SharePoint generator        | **1.10.0** | Recorded in `.yo-rc.json`; do not run it over this existing project |
 
 The generator is not needed to clone, install, build, serve, or package this repository. Its version is documented only for recreating the scaffold. Because this code targets SPFx 1.4.1, do not run a newer generator in this folder: it can upgrade the solution and make it incompatible with the target farm.
 

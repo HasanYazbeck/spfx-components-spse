@@ -200,6 +200,10 @@ export default class HeroComponents extends React.Component<
               : `url('${this.props.properties.fallbackImageUrl || ""}')`,
           }}
         />
+        <div className={styles.visualScene} aria-hidden="true">
+          <span className={styles.visualRing} />
+          <span className={styles.visualAccent} />
+        </div>
         <div
           className={styles.overlay}
           style={{ opacity: overlayStrength / 100 }}

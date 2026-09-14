@@ -1,6 +1,6 @@
 define([], function() {
   return {
-    "PropertyPaneDescription": "تكوين الويب بارط",
+    "PropertyPaneDescription": "تكوين الويب بارت",
     "BasicGroupName": "الإعدادات الأساسية",
     "GeneralGroupName": "الإعدادات العامة",
     "DescriptionFieldLabel": "حقل الوصف",
